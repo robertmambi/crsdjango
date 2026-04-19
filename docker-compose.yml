@@ -1,4 +1,3 @@
-version: "3.9"
 
 services:
   web:
@@ -12,6 +11,15 @@ services:
     depends_on:
       - db
       - redis
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer_crsdjango
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
 
   db:
     image: postgres:15
@@ -60,3 +68,4 @@ services:
 
 volumes:
   postgres_data:
+  portainer_data:

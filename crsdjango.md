@@ -13,6 +13,9 @@
 
 # Docker
 - crsdjango/docker-compose.yml
+- touch Dockerfile
+- touch requirements.txt
+- docker compose up -d --build
 ```
 Django app (Python backend)
 PostgreSQL (database)
@@ -20,5 +23,19 @@ Redis (optional, for cache/queues)
 Nginx (optional, for production)
 pgadmin
 redisinsight
+portainer
 ```
 
+# 🌐 Where to access everything
+```
+Django (direct):
+👉 http://localhost:8000
+Django via Nginx (if mapped):
+👉 http://localhost:8080
+Portainer:
+👉 http://localhost:9000
+pgAdmin:
+👉 http://localhost:5050
+RedisInsight:
+👉 http://localhost:5540
+```
